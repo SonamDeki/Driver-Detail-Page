@@ -13,42 +13,52 @@ const Home: NextPage = () => {
         
       </Head>
       <main>
-       <div id="header">
-        <br></br>
-    
-       <a href="*"><Image alt="" src="/back icon.png" height={50} width={50}/></a>
-       <h1> Vehicle detail</h1>
+        <div className="px-5 py-7">
+
+       <div id="header" className="flex flex-row">
+        
+       <a href="*"><Image alt="" src="/back icon.png" height={30} width={30}/></a>
+       <h1 className="text-xl font-bold"> Vehicle detail</h1>
        </div>
-       <div id= "EnteringVehicle number">
+       <div id= "EnteringVehicle number" >
        <form>
-        <label>Enter your vehicle number</label>
-        <input type="text" name="name" value=""></input><br></br>
-       
+        <label className="content-center">Enter Your vehicle number</label><br></br>
+        <input type="text" name="name" placeholder="Enter vehicle number" className=" .border-solid .border-purple-600 border rounded-lg px-3 py-2"></input><br></br>
        </form>
        </div>
 
-       <div id = "Vehicle type">
-       <Image alt="" src="/bike.png" height={50} width={50}/>
-       <label>Two wheeler</label>Two wheeler
-       <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></input>
+       {/* Entering the vehicle details */}
+       <label>Vehicle Type</label>
 
-
-       <Image alt="" src="/four wheeler.png" height={50} width={50}/>
-       <label>Four wheeler</label>Two wheeler
-       <input type="checkbox" id="vehicle2" name="vehicle2" value="Bike"></input>
+       {/*Two wheeler*/}
+       <div id = "Vehicle type" className="grid grid-cols-3 gap-10">
+       <Image alt="" src="/bike.png" height={40} width={40}/>
+       <label>Two wheeler</label>
+       <input type="radio" id="vehicle1" name="vehicle1" value="Bike"></input>
        </div>
 
-       <div id="button">
-       <button type="button">Add</button> 
-
+       {/* four wheeler */}
+       <div className="grid grid-cols-3 gap-10">
+       <Image alt="" src="/four wheeler.png" height={40} width={40}/>
+       <label>Four wheeler</label>
+       <input type="radio" id="vehicle2" name="vehicle2" value="Bike" className="rounded-full	"></input>
        </div>
 
+      {/* Add button */}
+      <div className="flex flex-col items-center">
+       <button type="submit" className=" mt-10 rounded-3xl bg-blue-600 px-10 py-2 text-white shadow-xl backdrop-blur-md transition-colors duration-300 hover:bg-blue-600 items-center">
+        Add
+      </button>
+       </div>
+
+       
+       {/* To link to another HTML page */}
        <div id = "Link">
-        <link href="/paymentConfirmation"/>
+        <Link href="/paymentConfirmation">
+          paymentConfirmation page
+        </Link>
+       </div>
 
-          Pay paymentConfirmation
-
-        
        </div>
       </main>
 
