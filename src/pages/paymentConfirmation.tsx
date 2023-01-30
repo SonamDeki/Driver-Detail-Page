@@ -14,16 +14,18 @@ const Home: NextPage = () => {
       </Head>
       <main>
       <div className="w-full xl:w-1/2 p-8  flex flex-col justify-center items-center">
-      <div id = "confirmation box" className="rounded-lg bg-blue-600 h-50  w-2/4 mt-20 " >
-        <label>Your Payment has been successful!</label><br></br>
-        <input type="checkbox" id="payment" name="paymentConfirmation" value="#" className="rounded-full"></input>
+      <div id = "confirmation box" className="rounded-3xl bg-blue-600 h-50  w-2/3 mt-20  mb-10 flex flex-col justify-center items-center text-white" >
+        <label className="ml-10 mt-5 ">Your Payment has been successful!</label><br></br>
+        
+        <Image alt="" src="/correct.png" height={30} width={30} className="mb-7"/>
+        <label className="mb-8" >Nu 50</label>
 
       </div>
        
 
-       <div id="button">
+       <div id="button" className="flex flex-col items-centerde">
         <label>Click here to know your parking status</label><br></br>
-       <button type="button" className="rounded-3xl bg-blue-400  text-white shadow-xl backdrop-blur-md transition-colors duration-300 hover:bg-blue-600 bg-opacity-50 px-10 py-2">Parking Session</button>
+       <button type="button" className="rounded-3xl bg-blue-600  text-white shadow-xl  transition-colors duration-300  px-10 py-2 mt-5">Parking Session</button>
        
        </div>
        </div>

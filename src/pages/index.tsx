@@ -12,43 +12,57 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
         
       </Head>
+     
       <main>
-        <div className="px-5 py-7">
+        <div className="px-10 py-10  mx-10 my-10">
 
+
+          {/*Heading Part*/}
        <div id="header" className="flex flex-row">
-        
        <a href="*"><Image alt="" src="/back icon.png" height={30} width={30}/></a>
-       <h1 className="text-xl font-bold"> Vehicle detail</h1>
+       <div  className="justify-center items-center ">
+       <h1 className="text-xl font-bold "> Vehicle detail</h1>
        </div>
+       </div>
+
+       {/*Adding the vehicle number */}
+       
        <div id= "EnteringVehicle number" >
-       <form>
-        <label className="content-center">Enter Your vehicle number</label><br></br>
-        <input type="text" name="name" placeholder="Enter vehicle number" className=" .border-solid .border-purple-600 border rounded-lg px-3 py-2"></input><br></br>
+       <form className="mt-8 ml-10 text-lg">
+        <label >Enter Your vehicle number</label><br></br>
+        <input type="text" name="name" placeholder="Enter vehicle number" className=" w-4/5 mb-10 mt-5 border-solid border-purple-600 border rounded-lg px-3 py-2"></input><br></br>
        </form>
        </div>
 
        {/* Entering the vehicle details */}
-       <label>Vehicle Type</label>
+
+       <div className="ml-10">
+       <div className="text-xl"><h2>Vehicle Type</h2></div>
 
        {/*Two wheeler*/}
-       <div id = "Vehicle type" className="grid grid-cols-3 gap-10">
-       <Image alt="" src="/bike.png" height={40} width={40}/>
+       <div id = "Vehicle type" className="grid grid-cols-3 gap-10  mb-5 mt-10 ">
+       <Image alt="" src="/bike.png" height={50} width={50}/>
        <label>Two wheeler</label>
-       <input type="radio" id="vehicle1" name="vehicle1" value="Bike"></input>
+       <input type="radio" id="vehicle1" name="vehicle1" value="Bike" className=" h-7 w-7"></input>
        </div>
 
        {/* four wheeler */}
        <div className="grid grid-cols-3 gap-10">
-       <Image alt="" src="/four wheeler.png" height={40} width={40}/>
+       <Image alt="" src="/four wheeler.png" height={50} width={50}/>
        <label>Four wheeler</label>
-       <input type="radio" id="vehicle2" name="vehicle2" value="Bike" className="rounded-full	"></input>
+       <input type="radio" id="vehicle2" name="vehicle2" value="Car" className="rounded-full	h-7 w-7 focus:ring-2"></input>
        </div>
+       </div>
+       
+       
+       
 
       {/* Add button */}
       <div className="flex flex-col items-center">
-       <button type="submit" className=" mt-10 rounded-3xl bg-blue-600 px-10 py-2 text-white shadow-xl backdrop-blur-md transition-colors duration-300 hover:bg-blue-600 items-center">
+       <button type="submit" className=" mt-10 rounded-3xl bg-blue-600 px-10 py-2 text-white shadow-xl backdrop-blur-md transition-colors duration-300 hover:bg-blue-600 items-center w-2/4 hover:bg-sky-700 ">
         Add
       </button>
+       </div>
        </div>
 
        
@@ -59,8 +73,10 @@ const Home: NextPage = () => {
         </Link>
        </div>
 
-       </div>
+       
+       
       </main>
+    
 
       
     </>
